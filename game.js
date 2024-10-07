@@ -16,7 +16,12 @@ function playGame() {
     
     
     function getHumanChoice(){
-        return prompt("Enter rock, paper or scissors"); }
+        let input = prompt("Enter rock, paper or scissors").toLowerCase(); 
+    while (input === null || (input !== "rock" && input !== "paper" & input !== "scissors")){
+        input = prompt("Invalid input. Please enter rock, paper, or scissors").toLowerCase();
+    }
+    return input;
+    }
     
     function playRound(humanChoice, computerChoice){
     humanChoice = humanChoice.toLowerCase();
@@ -37,10 +42,10 @@ function playGame() {
         }
         //counter to play 5 rounds
     
-        // for (let i = 0; 
-        //     i < 5;
-        //     i++
-        // )
+         for (let i = 0; 
+             i < 5;
+            i++
+         )
         {
         const buttons = document.querySelectorAll("button");
         buttons.forEach((button)=> {
