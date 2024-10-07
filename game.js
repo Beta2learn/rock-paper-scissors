@@ -8,15 +8,15 @@ function playGame() {
         if (ComputerChoice === 0) {
                     return "rock";
                 } else if (ComputerChoice === 1) {
-                    return "scissors";
-                } else {
                     return "paper";
+                } else {
+                    return "scissors";
                 }
             }
     
     
     function getHumanChoice(){
-        return prompt("Enter rock, paper or scissors");     }
+        return prompt("Enter rock, paper or scissors"); }
     
     function playRound(humanChoice, computerChoice){
     humanChoice = humanChoice.toLowerCase();
