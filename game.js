@@ -28,7 +28,7 @@
 
     //created div for  header elements
     const header = document.createElement("div")
-    container.appendChild(header);
+    container.appendChild(header)
     
     // function getComputerChoice() {
     //     const ComputerChoice = Math.floor(Math.random() * 3);
