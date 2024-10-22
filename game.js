@@ -1,12 +1,12 @@
     function playGame() {
     let humanScore = 0;
     let computerScore = 0;
-    let roundsplayed = 0;
+    let roundsPlayed = 0;
 
     //set document background image
     document.body.style.backgroundImage = "url(./image/background.jpg)";
     document.body.style.backgroundSize = "cover";
-    document.body.style.backgroundRepeat = "no repeat";
+    document.body.style.backgroundRepeat = "no-repeat";
 
     //container for game
     const container = document.createElement("div");
@@ -21,7 +21,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    align-content: center;
     padding: 10px;
     overflow-y: auto; `;
     document.body.appendChild(container);
@@ -30,7 +29,7 @@
     const header = document.createElement("div")
     container.appendChild(header);
 
-    const title = document.createElement("hi");
+    const title = document.createElement("h1");
     title.textContent = "Rock, Paper & Scissors";
     title.style.cssText = `
     color: #f44336;
@@ -43,7 +42,7 @@
     para1.style.cssText = `
     font-size: 18px;
     text-align: center;
-    font-weigt: bold;`;
+    font-weight: bold;`;
     header.appendChild(para1);
 
     // div for selection
@@ -72,7 +71,7 @@
     div2.appendChild(div3)
     
     // image element
-    const computerChoiceImage = document.createElement("image");
+    const computerChoiceImage = document.createElement("img");
     computerChoiceImage.style.cssText = `
     width: 100px;
     height: 100px;
@@ -117,7 +116,7 @@
         border-radius: 8px;`;
 
 
-        const image = document.createElement("image");
+        const img = document.createElement("img");
         img.src = imgSrc;
         img.alt = altText;
         img.width = 100;
@@ -131,11 +130,12 @@
         font-size: 15px;`;
         
         // eventlistener for choice/image selection
-        image.addEventListener("click", function () {
+        img.addEventListener("click", function () {
             if (roundsPlayed < 5) { 
             const computerChoice = getComputerChoice();
             playRound(choice, computerChoice);
-            const allImages = document.querySelectorAll("#humanselection image");
+
+            const allImages = document.querySelectorAll("#humanselection img");
                 allImages.forEach(image => {
                     image.style.border = "none";
                 });
@@ -186,21 +186,21 @@
         humanScoreDisplay.textContent = "Human Score: 0";
         computerScoreDisplay.textContent = "Computer Score: 0";
         showMessage("Game reset! Make a selection to begin");
-        computerChoiceImg.src = " ";
+        computerChoiceImage.src = " ";
         computer
         
     });
 
-    // playfunction
+    // playRound function
     function playRound(humanChoice, computerChoice) {
         humanChoice = humanChoice.toLowerCase();
 
         if (computerChoice === "rock") {
-            computerChoiceImg.src = "./image/rock.png";
+            computerChoiceImage.src = "./image/rock.png";
         } else if (computerChoice === "paper") {
-            computerChoiceImg.src = "./image/paper.png";
+            computerChoiceImage.src = "./image/paper.png";
         } else {
-            computerChoiceImg.src = "./image/scissors.png";
+            computerChoiceImage.src = "./image/scissors.png";
         }
 
         if (humanChoice === computerChoice) {
@@ -229,11 +229,11 @@
             choicesEnabled = false;
 
             if (humanScore > computerScore) {
-                showMessage("Congratulations! You win!");
+                showMessage("Congratulations! You win! Game over. Click 'Reset game' to play again ");
             } else if (computerScore > humanScore) {
-                showMessage("Computer wins!");
+                showMessage("Computer wins! Game over. Click 'Reset game' to play again");
             } else {
-                showMessage("Well done, it's a tie!");
+                showMessage("Well done, it's a tie! Game over. Click 'Reset game' to play again");
             }
         }
 
