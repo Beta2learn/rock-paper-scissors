@@ -4,7 +4,28 @@ function playGame() {
     let roundsplayed = 0;
 
     //set document background image
-    document.body.style.backgroundImage = "url( ./image/background.jpg)";
+    document.body.style.backgroundImage = "url(./img/background.jpg)";
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundRepeat = "no repeat";
+
+    //container for game
+    const container = document.createElement("div");
+    container.classList.add("container");
+    container.style.cssText = 
+    `
+    max-width: 100vh;
+    max-height: 80vh;
+    min-height: 50vh;
+    margin: 50px auto;
+    background-color: #deb887;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    padding: 10px;
+    overflow-y: auto; 
+    `;
+    document.body.appendChild(container);
     
     function getComputerChoice() {
         const ComputerChoice = Math.floor(Math.random() * 3);
