@@ -2,6 +2,9 @@ function playGame() {
     let humanScore = 0;
     let computerScore = 0;
     let roundsplayed = 0;
+
+    //set document background image
+    document.body.style.backgroundImage = "url( ./image/background.jpg)";
     
     function getComputerChoice() {
         const ComputerChoice = Math.floor(Math.random() * 3);
