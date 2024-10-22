@@ -53,8 +53,25 @@
     
     //computer GUI
     const div2 = document.createElement("div");
-    container.appendChild(div2);
     div2.style.flex = 1;
+    container.appendChild(div2);
+
+    const para2 = document.createElement("p");
+    para2.textContent = "Computer Selection";
+    para2.style.cssText = `
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 40px;`;
+    div2.appendChild(para2);
+
+    // div for computer selection
+    const div3 = document.createElement("div");
+    div3.id = "computerselection";
+    div3.style.marginTop = "20px";
+    div2.appendChild(div3)
+    
+
 
 
 
