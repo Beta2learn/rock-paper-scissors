@@ -6,3 +6,5 @@ Sought help and more tips from the internet
 Got lots of help from the book "Javascript for kids"
 
 All images used were sourced from pexels.com
+
+Built the game via DOM. All codes, document element, styles, images, etc, where done via DOM.
