@@ -32,9 +32,18 @@
     const title = document.createElement("hi");
     title.textContent = "Rock, Paper & Scissors";
     title.style.cssText = `
-    color #f44336;
+    color: #f44336;
     text-align: center;`;
     header.appendChild(title);
+
+    // paragraph
+    const para1 = document.createElement("p");
+    para1.textContent = "Make a selection to begin";
+    para1.style.cssText = `
+    font-size: 18px;
+    text-align: center;
+    font-weigt: bold;`;
+    header.appendChild(para1);
     
     // function getComputerChoice() {
     //     const ComputerChoice = Math.floor(Math.random() * 3);
