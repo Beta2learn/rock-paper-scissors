@@ -65,19 +65,9 @@ function playGame() {
         }
         console.log(`score: Human ${humanScore} - computer ${computerScore}`);
         }
-        // //counter to play 5 rounds
-    
-        //  for (let i = 0; 
-        //      i < 5;
-        //     i++
-        //  )
-        {
-        // const buttons = document.querySelectorAll("button");
-        // buttons.forEach((button)=> {
-        //     button.addEventListener("click", () => {
-        //         alert(button.id);
+        
             };
-        };
+        
 
         const humanSelection = getHumanChoice();
         const computerSelection = getComputerChoice();
