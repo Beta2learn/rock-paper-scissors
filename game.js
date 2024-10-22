@@ -29,6 +29,7 @@
     //created div for  header elements
     const header = document.createElement("div")
     container.appendChild(header);
+
     const title = document.createElement("hi");
     title.textContent = "Rock, Paper & Scissors";
     title.style.cssText = `
@@ -44,7 +45,27 @@
     text-align: center;
     font-weigt: bold;`;
     header.appendChild(para1);
+
+    // div for selection
+    const div = document.createElement("div");
+    div.id = "humanselection";
+    header.appendChild(div);
     
+    //computer GUI
+    const div2 = document.createElement("div");
+    container.appendChild(div2);
+    div2.style.flex = 1;
+
+
+
+
+
+
+
+
+
+
+
     // function getComputerChoice() {
     //     const ComputerChoice = Math.floor(Math.random() * 3);
 
