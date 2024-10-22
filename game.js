@@ -28,7 +28,13 @@
 
     //created div for  header elements
     const header = document.createElement("div")
-    container.appendChild(header)
+    container.appendChild(header);
+    const title = document.createElement("hi");
+    title.textContent = "Rock, Paper & Scissors";
+    title.style.cssText = `
+    color #f44336;
+    text-align: center;`;
+    header.appendChild(title);
     
     // function getComputerChoice() {
     //     const ComputerChoice = Math.floor(Math.random() * 3);
