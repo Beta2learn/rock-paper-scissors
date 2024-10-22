@@ -71,6 +71,23 @@
     div3.style.marginTop = "20px";
     div2.appendChild(div3)
     
+    // image element
+    const computerChoiceImage = document.createElement("img");
+    computerChoiceImage.style.cssText = `
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    margin: 10px auto;
+    display: flex;`;
+    div3.appendChild(computerChoiceImage);
+
+    // result message display
+    const messageDisplay = document.createElement("p");
+    messageDisplay.style.cssText = `
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;`;
+    container.appendChild(messageDisplay);
 
 
 
